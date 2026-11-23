@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mayor Feature · Neopolis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1a1a62;
+    --card: #982cd1;
+    --accent: #8b9eff;
+    --gold: #ffc83d;
+    --ink: #ffffff;
+    --nav-bg: rgba(255,255,255,0.7);
+    --nav-ink: #1e2424;
+    --max: 881px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, system-ui, sans-serif; font-size: 20px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; height: auto; border-radius: 16px; }
+  a { color: inherit; }
+
+  nav { position: sticky; top: 0; z-index: 10; background: var(--nav-bg); backdrop-filter: blur(10px); color: var(--nav-ink); }
+  nav .in { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; font-size: 18px; }
+  nav b { font-weight: 700; }
+  nav .links { display: flex; gap: 48px; }
+  nav .links a { text-decoration: none; }
+
+  .hero { max-width: 1036px; margin: 0 auto; padding: 0 16px; }
+  .hero img { border-radius: 0 0 24px 24px; width: 100%; }
+
+  main { max-width: var(--max); margin: 0 auto; padding: 0 16px 80px; }
+  section { margin-top: 96px; }
+  .eyebrow { font-size: 18px; margin: 64px 0 8px; }
+  .eyebrow span { color: var(--gold); font-weight: 700; }
+  h1 { font-size: 56px; line-height: 1.2; font-weight: 700; margin: 0 0 40px; }
+  .lede { color: var(--accent); font-weight: 500; line-height: 1.8; margin: 0 0 24px; }
+  .meta p { margin: 0 0 14px; line-height: 1.2; }
+  .note { font-size: 16px; opacity: .8; margin-top: 24px; }
+
+  h2 { font-size: 52px; line-height: 1.2; font-weight: 700; margin: 0 0 24px; }
+  h3 { font-size: 36px; line-height: 1.2; font-weight: 700; margin: 0 0 16px; }
+  h4 { font-size: 40px; line-height: 1.2; font-weight: 900; margin: 64px 0 24px; }
+  .sub { font-weight: 700; margin: 0 0 8px; }
+  p { margin: 0 0 20px; }
+  .fig { margin: 32px 0; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; }
+  .stat { width: 280px; margin: 24px auto; border-radius: 0; }
+
+  .card { background: var(--card); border-radius: 24px; padding: 40px; margin: 32px 0; font-size: 24px; line-height: 1.33; }
+  .card p { margin: 0 0 16px; }
+  .card .group { margin-bottom: 28px; }
+  .card .group:last-child { margin-bottom: 0; }
+  .card ul { margin: 6px 0 0; padding-left: 26px; }
+  .card li { margin-bottom: 6px; }
+  .card blockquote { margin: 0 0 12px; font-style: italic; }
+
+  .learn { display: grid; gap: 20px; margin-top: 24px; }
+  .learn div { border-left: 4px solid var(--accent); padding-left: 16px; }
+  .learn b { display: block; }
+
+  .video { position: relative; padding-bottom: 52.8%; height: 0; margin: 24px 0; border-radius: 16px; overflow: hidden; }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  .next { background: #fff; color: #1e2424; }
+  .next .in { max-width: var(--max); margin: 0 auto; padding: 64px 16px; }
+  .next small { font-size: 24px; font-weight: 700; display: block; margin-bottom: 8px; }
+  .next a { font-size: 40px; font-weight: 700; text-decoration: none; display: block; }
+  .next span { font-size: 16px; }
+  footer { text-align: center; padding: 48px 16px; }
+  footer a { font-size: 20px; }
+  footer p { font-size: 18px; opacity: .8; margin-top: 12px; }
+
+  @media (max-width: 720px) {
+    body { font-size: 17px; }
+    nav .in { padding: 12px 16px; font-size: 15px; }
+    nav .links { gap: 16px; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 34px; }
+    h3 { font-size: 26px; }
+    h4 { font-size: 28px; margin-top: 48px; }
+    section { margin-top: 64px; }
+    .card { padding: 24px; font-size: 18px; }
+    .pair { grid-template-columns: 1fr; }
+    .next a { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="in">
+  <b>Bahareh Portfolio</b>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/#work">My Work</a>
+    <a href="/#about">About Me</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</div></nav>
+
+<div class="hero"><img src="images/01.webp" alt="Mayor feature screens in Neopolis"></div>
+
+<main>
+
+<p class="eyebrow">Leading a land in a city-builder game, <span>Neopolis</span></p>
+<h1>Designing the Mayor Feature for Neopolis</h1>
+<p class="lede">A late-game monetization feature that lets players buy and lead virtual neighborhoods, organize events, and shape in-game communities through leadership and NFTs.</p>
+<div class="meta">
+  <p><b>Project type:</b> Monetization Feature Design for a Live Game</p>
+  <p><b>Role:</b> Product Designer (UX + UI + Research) | Marketing banner designer.</p>
+  <p><b>Industry:</b> Mobile Gaming, Social, Web3</p>
+  <p><b>Tools:</b> Figma, Figjam, Loom, Notion, Adobe Illustrator, Adobe Photoshop</p>
+</div>
+<p class="note"><b>Note:</b> Since many people asked me, in Neopolis the illustrations are beautifully crafted by our talented artist, Sego</p>
+
+<div class="fig"><img loading="lazy" decoding="async" src="images/03.webp" alt="Become the Mayor campaign banners for Berlin, Tokyo and Porto"></div>
+
+<section>
+  <h2>The Problem</h2>
+  <p class="sub">A new revenue stream for late-game players</p>
+  <p>Neopolis needed a new revenue stream, and the clearest opportunity was our high-level players (level 20+): our most invested audience, but one with little left to work toward. Only 12% of them remained daily active, while 28% were inactive and 19% returned only monthly. We saw a chance to design a feature players would pay for because it gave them what they were missing: new late-game goals, a social role, and deeper ownership.</p>
+  <img class="stat" src="images/04.webp" alt="About 19% monthly retention">
+</section>
+
+<section>
+  <h2>Discovery</h2>
+  <p class="sub">Understanding Why High-Level Players Stop Playing or Don’t Return to Neopolis</p>
+  <p>We began by investigating player pain points and desires to understand the reasons behind their disengagement. We organized monthly Neopolis Council sessions and dedicated a special one specifically to this research.</p>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/05.webp" alt="Neopolis Council session" style="max-width:282px"></div>
+</section>
+
+<section>
+  <h2>Research Result</h2>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/06.webp" alt="Research results"></div>
+  <div class="card">
+    <h3>Key Findings:</h3>
+    <div class="group"><b>Gameplay Stagnation:</b>
+      <ul><li>Players feel the game becomes repetitive once they’ve managed all buildings and districts.</li><li>Daily actions lack novelty, reducing motivation to log in regularly.</li></ul></div>
+    <div class="group"><b>Desire for Roles &amp; Responsibilities:</b>
+      <ul><li>Players expressed interest in new roles, such as a Mayor or community leader.</li><li>Roles would give high-level players purpose and create meaningful responsibilities.</li></ul></div>
+    <div class="group"><b>Need for Expanded Ownership:</b>
+      <ul><li>Current ownership mechanics feel limited; players want their decisions to have a bigger impact.</li><li>A larger sense of ownership would enhance attachment and long-term engagement.</li></ul></div>
+    <div class="group"><b>Community &amp; Collaboration Gaps:</b>
+      <ul><li>Collaboration with neighbors is minimal, and community missions are underdeveloped.</li><li>Players want opportunities to contribute meaningfully to the wider city.</li></ul></div>
+    <div class="group"><b>Recognition &amp; Competition Plateaus:</b>
+      <ul><li>Leaderboards, awards, and seasonal events become repetitive and lose motivating power.</li><li>Players want evolving competitions and recognition systems.</li></ul></div>
+    <div class="group"><b>Retention &amp; Return Hooks Missing:</b>
+      <ul><li>Experienced players have fewer reasons to return once they’ve mastered core systems.</li><li>Dynamic challenges, rewards, and evolving content are needed to sustain engagement.</li></ul></div>
+    <div class="group"><b>Conclusion:</b> High-level players disengage because the game lacks novelty, meaningful roles, deeper ownership, collaborative features, evolving recognition, and dynamic challenges. Addressing these areas could significantly improve retention, engagement, and community activity among experienced players.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Journey Mapping</h2>
+  <p>I started creating a journey map in collaboration with the game designer and product manager to better understand the player experience and identify key moments of engagement and friction.</p>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/07.webp" alt="Journey map legend"></div>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/08.webp" alt="Player journey map"></div>
+</section>
+
+<section>
+  <p class="sub">Research:</p>
+  <h2>Early design testing</h2>
+  <p>Building a feature like Mayors would take the team a lot of time, so before committing we ran a fake-door test in the game to see whether players would actually pay for it.</p>
+  <p>We created a simple poster inviting players to become a mayor, with a real purchase button priced at 25€. Players who clicked could leave their email and sign up to be among the first mayors in Neopolis. I designed this test using the Neopolis design system, and our motion designer created some beautiful GIFs to boost engagement.</p>
+  <div class="card">
+    <h3>Research goal:</h3>
+    <p>To measure purchase intent: would players click to buy a mayor role before the feature existed?</p>
+  </div>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/09.webp" alt="Fake-door test screens: entry banner, offer with purchase button, and waiting list sign-up"></div>
+  <div class="card">
+    <h3>Research Result:</h3>
+    <p>We showed the offer to 11.5K new players opening the app for the first time. 1,950 of them (17%) opened it, and 130 tapped "Become Mayor for 25€" for a feature that didn't exist yet: 1.1% of everyone who saw it, and 6.7% of those who opened the offer. These players chose to pay a real price, not just to show interest.</p>
+    <p>Since this test reached new players rather than the level 20+ players we were designing for, we treated it as an early demand signal, not proof. It was enough for the team to commit to building the feature in phases, and we validated it with high-level players next through council sessions and interviews.</p>
+  </div>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/10.webp" alt="Funnel: 11.47K first app open, 1,950 tapped Discover, 130 tapped purchase button"></div>
+</section>
+
+<section>
+  <h2>Discovery</h2>
+  <p>We participated in another council with Neopolis players to introduce the Mayor feature and gather their feedback. In addition, we launched announcements and marketing campaigns to better understand players’ perspectives and gauge their overall interest in the feature.</p>
+  <div class="pair"><img loading="lazy" decoding="async" src="images/11.webp" alt="Mayor announcement"><img loading="lazy" decoding="async" src="images/12.webp" alt="Mayor marketing campaign"></div>
+
+  <h3>Affinity Mapping</h3>
+  <p>After synthesizing and analyzing the research data, I identified several key considerations that would significantly shape the Mayor feature, ranging from user expectations around leadership and social interaction to concerns about fairness, accessibility, and long-term engagement.</p>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/13.webp" alt="Affinity map"></div>
+</section>
+
+<section>
+  <h2>What I learned</h2>
+  <p>To understand exactly how players felt about the feature, we started talking to them directly through interviews. We spoke with 12 individuals from a range of backgrounds:</p>
+  <div class="learn">
+    <div><b>Players want connection.</b>Social interaction and community-building are key motivators.</div>
+    <div><b>Leadership should be active.</b>Users expect meaningful roles with real responsibilities.</div>
+    <div><b>NFTs bring value, but need balance.</b>Ownership is exciting, but fairness matters.</div>
+    <div><b>Motivation comes from rewards.</b>Visible, effort-based rewards drive engagement and retention.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Wireframing</h2>
+  <p>Based on the findings, I began creating initial sketches and wireframes. I reviewed them with the team, including developers, the game designer, artist, and product manager, to ensure alignment and gather early feedback.</p>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/14.webp" alt="Sketches and wireframes"></div>
+</section>
+
+<section>
+  <h2>UI Design</h2>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/15.webp" alt="Mayor feature UI overview"></div>
+  <p>After trying out different ideas through sketches, I landed on the final design for the Mayor feature. The map clearly shows different land types, like available lands, your own lands, other players’ lands, live events, and locked areas.</p>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/16.webp" alt="Map with land types"></div>
+
+  <h4>Purchasing a land as a new mayor</h4>
+  <img loading="lazy" decoding="async" src="images/17.webp" alt="Land purchase flow">
+  <h4>Mayors Event Creation</h4>
+  <img loading="lazy" decoding="async" src="images/18.webp" alt="Event creation flow">
+  <h4>Citizens Event Experience</h4>
+  <img loading="lazy" decoding="async" src="images/19.webp" alt="Citizen event experience">
+  <h4>Meeting Hall Event</h4>
+  <img loading="lazy" decoding="async" src="images/20.webp" alt="Meeting hall event">
+</section>
+
+<section>
+  <h2>Usability test on the prototype</h2>
+  <p>I conducted initial usability testing with 4 players, focusing on the new land feature within the early prototypes.</p>
+  <div class="card">
+    <h3>Test Goal:</h3>
+    <p>Exploring two key functionalities: land purchasing flow and participation in land events.</p>
+  </div>
+  <div class="video"><iframe src="https://www.loom.com/embed/61495ac7bf3a454db672d55d1b2c57c5?sid=354264c2-5f3d-4e82-9c2b-cc85e8dd056a" allowfullscreen loading="lazy" title="Usability test recording 1"></iframe></div>
+  <div class="video"><iframe src="https://www.loom.com/embed/9c947bbe04b3423d920833abe9809c01?sid=5992f142-cb62-4321-80e5-a899a6b1af52" allowfullscreen loading="lazy" title="Usability test recording 2"></iframe></div>
+  <div class="card">
+    <h3>What I learned:</h3>
+    <p>This test showed positive results overall—users found the experience smooth, especially when it came to purchasing and discovering events. However, some key concerns surfaced around the land page.</p>
+    <p>Mayors pointed out the lack of advertising tools and land performance stats, making it harder to manage their territories effectively.</p>
+    <p>Both Mayors and regular players wanted a clearer understanding of how tokens relate to events, particularly premium ones. Their questions highlighted areas for improvement:</p>
+    <blockquote>"Do all lands have the same value?"</blockquote>
+    <blockquote>"How can other players find our events if they’re not in this location?"</blockquote>
+    <blockquote>"Can I use my tokens to run a premium event?"</blockquote>
+    <p>These insights helped refine the experience and shape the next design decisions.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Iterating on the Design:</h2>
+  <p>Together with the team, we made several key changes based on user testing insights, which were handed off in different design iterations:</p>
+
+  <h3>Land Performance Section:</h3>
+  <p>We added a performance section to all lands, highlighting their value as in-game or NFT assets. Performance is based on metrics like land popularity, number of events, visitor count, buildings, and citizens. These criteria were carefully aligned with the game mechanics, in collaboration with the game designer.</p>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/21.webp" alt="Land performance section"></div>
+
+  <h3>Land Rankings:</h3>
+  <p>A new ranking system was introduced, based on the Neoland token produced by the land, to reward high-performing lands. Top-ranked lands now get more tokens rewards, adding an extra layer of motivation and progression.</p>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/22.webp" alt="Land rankings"></div>
+
+  <h3>Event Sharing Channel:</h3>
+  <p>To help Mayors promote their events, we introduced a dedicated event-sharing channel within the Neopolis chat. This allows them to reach more citizens, even outside their land’s location.</p>
+  <div class="fig"><img loading="lazy" decoding="async" src="images/23.webp" alt="Event sharing channel in chat"></div>
+</section>
+
+</main>
+
+<div class="next"><div class="in">
+  <small>Next Project:</small>
+  <a href="https://bahareh.framer.website/brio">Brio Social App</a>
+  <span>Skill-Sharing Social App | End to End Design Process</span>
+  <a href="https://bahareh.framer.website/brio"><img loading="lazy" decoding="async" src="images/25.webp" alt="Brio Social App" style="margin-top:24px"></a>
+</div></div>
+
+<footer>
+  <a href="mailto:spring.tavakoli@gmail.com">Spring.tavakoli@gmail.com</a>
+  <p>Thanks for stopping by. Hope something sparked your interest.</p>
+</footer>
+
+</body>
+</html>
